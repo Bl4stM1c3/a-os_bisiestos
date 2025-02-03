@@ -1,0 +1,11 @@
+#Posible solucion al ejercicio 32 de https://retosdeprogramacion.com/ejercicios/
+# Crea una función que imprima los 30 próximos años bisiestos
+# * siguientes a uno dado.
+# * - Utiliza el menor número de líneas para resolver el ejercicio.
+#Utilizaremos el metodo count de la biblioteca itertools
+
+from itertools import count
+
+def años_bisiestos(año):
+  return [i for i in count(año) if (i % 4 == 0 and i % 100 != 0) or (i % 400 == 0)][::30]
+
